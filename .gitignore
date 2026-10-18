@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets
+.oci/
+.env
+.env.*
+*.pem
+*.key
+
+# # Generated artifacts
+# models/*.joblib
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Temporary files
+.pytest_cache/
+.ipynb_checkpoints/

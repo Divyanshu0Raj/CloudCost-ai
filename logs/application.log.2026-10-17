@@ -1,0 +1,89 @@
+[2026-10-17 07:24:12,469] INFO - Application started
+[2026-10-17 07:24:12,469] WARNING - this is a waarning 
+[2026-10-17 07:24:12,469] ERROR - this is an error 
+[2026-10-17 07:24:26,631] INFO - Application started
+[2026-10-17 07:24:26,631] WARNING - this is a waarning 
+[2026-10-17 07:24:26,631] ERROR - this is an error 
+[2026-10-17 21:00:00,402] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/exception_test.py|Line: 4|Error: division by zero
+[2026-10-17 21:45:34,661] INFO - loading oci configuration
+[2026-10-17 21:45:34,662] ERROR - Error loading OCI configuration
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/data_loader.py", line 21, in load_billing_data
+    client=oci.object_stotage.ObjectStorageClient(config)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/oci/__init__.py", line 31, in __getattr__
+    raise AttributeError("module " + __name__ + " has no attribute" + x)
+AttributeError: module oci has no attributeobject_stotage. Did you mean: 'object_storage'?
+[2026-10-17 21:45:34,663] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/data_loader.py|Line: 21|Error: module oci has no attributeobject_stotage
+[2026-10-17 21:49:10,353] INFO - loading oci configuration
+[2026-10-17 21:49:11,183] INFO - downloading object :cloudcost_billing_50000.csv
+[2026-10-17 21:49:11,183] ERROR - Error loading OCI configuration
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/data_loader.py", line 26, in load_billing_data
+    response=client.get_object(
+             ^^^^^^^^^^^^^^^^^^
+TypeError: ObjectStorageClient.get_object() missing 1 required positional argument: 'namespace_name'
+[2026-10-17 21:49:11,184] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/data_loader.py|Line: 26|Error: ObjectStorageClient.get_object() missing 1 required positional argument: 'namespace_name'
+[2026-10-17 21:50:07,346] INFO - loading oci configuration
+[2026-10-17 21:50:11,994] INFO - downloading object :cloudcost_billing_50000.csv
+[2026-10-17 21:55:00,739] INFO - Successfully loaded 50000 rows and 32 columns
+[2026-10-17 21:58:28,947] INFO - loading oci configuration
+[2026-10-17 21:58:39,154] INFO - downloading object :cloudcost_billing_50000.csv
+[2026-10-17 22:03:28,443] ERROR - Error loading OCI configuration
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/urllib3/response.py", line 905, in _error_catcher
+    yield
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1022, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1005, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 484, in read
+    s = self.fp.read(amt)
+        ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/oci/_vendor/requests/models.py", line 765, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1267, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1110, in read
+    data = self._raw_read(amt)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/urllib3/response.py", line 1021, in _raw_read
+    with self._error_catcher():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/urllib3/response.py", line 910, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ReadTimeoutError: OCIConnectionPool(host='objectstorage.ap-mumbai-1.oraclecloud.com', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/data_loader.py", line 32, in load_billing_data
+    csv_content=response.data.content
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/oci/_vendor/requests/models.py", line 843, in content
+    self._content = b''.join(self.iter_content(CONTENT_CHUNK_SIZE)) or b''
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/oci/_vendor/requests/models.py", line 772, in generate
+    raise ConnectionError(e)
+oci._vendor.requests.exceptions.ConnectionError: OCIConnectionPool(host='objectstorage.ap-mumbai-1.oraclecloud.com', port=443): Read timed out.
+[2026-10-17 22:03:28,463] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/data_loader.py|Line: 32|Error: OCIConnectionPool(host='objectstorage.ap-mumbai-1.oraclecloud.com', port=443): Read timed out.
+[2026-10-18 11:17:37,386] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/cost_analyzer.py|Line: 49|Error: Series.sort_values() takes 1 positional argument but 2 positional arguments (and 1 keyword-only argument) were given

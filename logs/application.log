@@ -1,0 +1,216 @@
+[2026-10-18 11:17:37,385] ERROR - cost analysis failed
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/cost_analyzer.py", line 49, in analyze_costs
+    .sort_values("cost",ascending=False)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Series.sort_values() takes 1 positional argument but 2 positional arguments (and 1 keyword-only argument) were given
+[2026-10-18 11:19:12,052] ERROR - cost analysis failed
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/cost_analyzer.py", line 49, in analyze_costs
+    .sort_values(by="cost",ascending=False)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Series.sort_values() got an unexpected keyword argument 'by'
+[2026-10-18 11:19:12,053] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/cost_analyzer.py|Line: 49|Error: Series.sort_values() got an unexpected keyword argument 'by'
+[2026-10-18 11:19:46,462] ERROR - cost analysis failed
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/cost_analyzer.py", line 49, in analyze_costs
+    .sort_values(by="cost",ascending=False)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Series.sort_values() got an unexpected keyword argument 'by'
+[2026-10-18 11:19:46,462] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/cost_analyzer.py|Line: 49|Error: Series.sort_values() got an unexpected keyword argument 'by'
+[2026-10-18 11:21:02,386] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 11:22:14,988] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 12:39:21,018] ERROR - Anomaly detector training failed
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py", line 95, in train_anomaly_detector
+    if billing["usage_id"].dupliacted().any():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6321, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Series' object has no attribute 'dupliacted'. Did you mean: 'duplicated'?
+[2026-10-18 12:39:21,036] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py|Line: 95|Error: 'Series' object has no attribute 'dupliacted'
+[2026-10-18 12:40:17,547] ERROR - Anomaly detector training failed
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py", line 123, in train_anomaly_detector
+    pipeline=build_pipeline()
+             ^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py", line 70, in build_pipeline
+    classifier=RandomForestClassifier(n_estimators=200,class_weight="balanced",random_state=42,n_jobs=-1,min_samples_lead=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RandomForestClassifier.__init__() got an unexpected keyword argument 'min_samples_lead'
+[2026-10-18 12:40:17,548] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py|Line: 123|Error: RandomForestClassifier.__init__() got an unexpected keyword argument 'min_samples_lead'
+[2026-10-18 12:41:53,722] ERROR - Anomaly detector training failed
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py", line 124, in train_anomaly_detector
+    pipeline.fit(x_train,y_train)
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 636, in fit
+    Xt = self._fit(
+         ^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 565, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1593, in _fit_transform_one_with_callbacks
+    Xt, transformer = _fit_transform_one(
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1566, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/compose/_column_transformer.py", line 979, in fit_transform
+    result = self._call_func_on_transformers(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/compose/_column_transformer.py", line 889, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1986, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1914, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 184, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1566, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 716, in fit_transform
+    Xt = self._fit(X, y, routed_params, callback_ctx=callback_ctx)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 565, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1593, in _fit_transform_one_with_callbacks
+    Xt, transformer = _fit_transform_one(
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1566, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 972, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1393, in wrapper
+    estimator._validate_params()
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 554, in _validate_params
+    validate_parameter_constraints(
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'strategy' parameter of SimpleImputer must be a str among {'median', 'most_frequent', 'mean', 'constant'} or a callable. Got 'most_freuent' instead.
+[2026-10-18 12:41:53,734] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py|Line: 124|Error: The 'strategy' parameter of SimpleImputer must be a str among {'median', 'most_frequent', 'mean', 'constant'} or a callable. Got 'most_freuent' instead.
+[2026-10-18 12:43:52,698] ERROR - Anomaly detector training failed
+Traceback (most recent call last):
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py", line 124, in train_anomaly_detector
+    pipeline.fit(x_train,y_train)
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 636, in fit
+    Xt = self._fit(
+         ^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 565, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1593, in _fit_transform_one_with_callbacks
+    Xt, transformer = _fit_transform_one(
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1566, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/compose/_column_transformer.py", line 979, in fit_transform
+    result = self._call_func_on_transformers(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/compose/_column_transformer.py", line 889, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 91, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1986, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1914, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 184, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1566, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1403, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 716, in fit_transform
+    Xt = self._fit(X, y, routed_params, callback_ctx=callback_ctx)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 565, in _fit
+    X, fitted_transformer = fit_transform_one_cached(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/joblib/memory.py", line 326, in __call__
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1593, in _fit_transform_one_with_callbacks
+    Xt, transformer = _fit_transform_one(
+                      ^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/pipeline.py", line 1566, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/_set_output.py", line 319, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 972, in fit_transform
+    return self.fit(X, y, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1393, in wrapper
+    estimator._validate_params()
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/base.py", line 554, in _validate_params
+    validate_parameter_constraints(
+  File "/home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 98, in validate_parameter_constraints
+    raise InvalidParameterError(
+sklearn.utils._param_validation.InvalidParameterError: The 'strategy' parameter of SimpleImputer must be a str among {'constant', 'mean', 'median', 'most_frequent'} or a callable. Got 'q' instead.
+[2026-10-18 12:43:52,702] ERROR - File: /home/divyanshu-singh/PycharmProjects/PythonProject/data_science_journey/CloudCost-ai/src/cloudcost_ai/anomaly_detector.py|Line: 124|Error: The 'strategy' parameter of SimpleImputer must be a str among {'constant', 'mean', 'median', 'most_frequent'} or a callable. Got 'q' instead.
+[2026-10-18 12:47:43,764] INFO - Anomaly model trained. Records=50000, anomalies=925, metrics={'precision': 0.8545454545454545, 'recall': 0.7621621621621621, 'f1_score': 0.8057142857142857, 'average_precision': 0.8536728092233732}
+[2026-10-18 19:40:36,342] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:41:26,360] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:42:25,256] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:42:30,811] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:42:32,455] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:42:35,020] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:45:05,359] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:46:30,993] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:46:45,299] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:46:53,034] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
+[2026-10-18 19:46:57,527] INFO - Cost analysis completed successfully: 50000 records, total cost 1538871.99
